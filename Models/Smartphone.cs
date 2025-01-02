@@ -1,14 +1,31 @@
+using System.Dynamic;
+
 namespace DesafioPOO.Models
 {
     public abstract class Smartphone
     {
         public string Numero { get; set; }
-        // TODO: Implementar as propriedades faltantes de acordo com o diagrama
+        private string Modelo{ get;}
+        private string Imei {get;}
+        private int Memoria {get;}
 
-        public Smartphone(string numero)
+        
+
+        public Smartphone(string numero, string modelo, string imei, int memoria )
         {
             Numero = numero;
-            // TODO: Passar os parâmetros do construtor para as propriedades
+            Memoria = memoria; 
+            Imei = imei; 
+            Memoria = memoria; 
+
+           
+        }
+
+        protected Smartphone(string modelo, string imei, int memoria)
+        {
+            Modelo = modelo;
+            Imei = imei;
+            Memoria = memoria;
         }
 
         public void Ligar()
